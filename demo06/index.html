@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>this.props.children</title>
+	<script src="../build/react.js"></script>
+	<script src="../build/react-dom.js"></script>
+	<script src="../build/browser.min.js"></script>
+</head>
+<body>
+	<div id="example"></div>
+
+
+	<script type="text/babel">
+	/*注释部分是自己写的,非注释部分是粘贴过来的.*/
+		/*var myTitle = React.createClass({
+			propTypes:{
+				title:React.PropTypes.string.isRequired,
+			},
+			render: function(){
+				return <h1> {this.props.title} </h1>;
+			}
+		});
+
+		var data = 123;
+		ReactDOM.render(
+			<myTitle title={data} />,
+			document.body
+		);*/
+var data = 123;
+
+      var MyTitle = React.createClass({
+        propTypes: {
+          title: React.PropTypes.string.isRequired,
+        },
+
+        render: function() {
+          return <h1> {this.props.title} </h1>;
+        }
+      });
+
+      ReactDOM.render(
+        <MyTitle title={data} />,
+        document.body
+      );
+	</script>
+</body>
+</html>
